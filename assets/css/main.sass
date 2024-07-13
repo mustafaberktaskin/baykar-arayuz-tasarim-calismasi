@@ -1,0 +1,971 @@
+@use 'variables'
+@use 'short-code'
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap')
+@import url('../vendor/bootstrap-5.2/css/bootstrap.min.css')
+@import url('../vendor/fontawesome/css/all.min.css')
+@import url('../vendor/icomoon/style.css')
+
+*
+    font-family: variables.$mainFontFamily
+html
+    scroll-behavior: smooth
+a,button
+    @include short-code.text-DO
+    cursor: pointer
+a
+    &:hover, &:focus
+        @include short-code.text-DO
+button
+    &:hover, &:focus
+        @include short-code.text-DO
+
+.cs-container
+    max-width: 1280px
+    margin: 0 auto
+.cs-map-container
+    max-width: 1050px
+    margin: 0 auto
+header
+    background-color: variables.$color1
+    .cs-header-wrapper
+        .container-fluid
+            padding: 0
+            .navbar-brand
+                font-size: 32px
+                font-weight: 700
+                color: variables.$mainColor
+            .nav-link
+                color: variables.$mainColor
+                font-weight: 500
+                height: 100%
+                display: flex
+                align-items: center
+                padding: 12px
+                &.active
+                    color: variables.$mainColor
+                    font-weight: 700
+            .navbar-toggler
+                box-shadow: none
+                outline: none
+                border: none
+                &:focus
+                    box-shadow: none
+                    outline: none
+                    border: none
+.cs-border-btn
+    border: 2px solid variables.$mainColor
+    background: variables.$transparentColor
+    padding: 12px 30px
+    border-radius: 8px
+    color: variables.$mainColor
+    transition: all .3 ease
+    font-weight: 500
+    width: max-content
+    &:hover
+        background: variables.$mainColor
+        padding: 12px 30px
+        color: variables.$whiteColor
+        border: 2px solid variables.$mainColor
+        transition: all .3 ease
+.cs-noborder-btn
+    border: 2px solid variables.$transparentColor
+    background: variables.$transparentColor
+    padding: 12px 30px
+    border-radius: 8px
+    color: variables.$mainColor
+    transition: all .3 ease
+    font-weight: 500
+    width: max-content
+    &:hover
+        background: variables.$color1
+        padding: 12px 30px
+        color: variables.$mainColor
+        transition: all .3 ease
+        border: 2px solid variables.$mainColor
+.cs-white-btn
+    border: 2px solid variables.$whiteColor
+    background: variables.$fontColor
+    padding: 12px 30px
+    border-radius: 8px
+    color: variables.$whiteColor
+    transition: all .3 ease
+    font-weight: 500
+    width: max-content
+    &:hover
+        background: variables.$whiteColor
+        padding: 12px 30px
+        color: variables.$fontColor !important
+        transition: all .3 ease
+        border: 2px solid variables.$fontColor
+        
+.cs-global-title
+    font-size: 56px
+    line-height: 64px
+    font-weight: 800
+    color: variables.$fontColor
+.cs-section1
+    padding: 80px 0
+    background: linear-gradient(to bottom right,variables.$color1 0%,variables.$color1 53%,variables.$color2 53%,variables.$color2 100%)
+    .cs-sec1-text-wrapper
+        display: flex
+        align-items: center
+        height: 100%
+        .cs-sec1-textbox
+            display: flex
+            flex-direction: column
+            gap: 32px
+            .cs-title
+                font-size: 72px
+                line-height: 80px
+                font-weight: 800
+                color: variables.$fontColor
+            .cs-desc
+                font-size: 18px
+                line-height: 26px
+                font-weight: 400
+                color: variables.$fontColor
+            .cs-button-group
+                display: flex
+                gap: 16px
+    .cs-sec1-prdctimg-wrapper
+        display: flex
+        justify-content: center
+        .cs-yellow-box
+            max-width: 367px
+            max-height: 372px
+            width: 100%
+            height: 100%
+            border-radius: 50px
+            background-color: #FBBF24
+            display: flex
+            justify-content: center
+            align-items: center
+            
+    .cs-sec-1-card-wrapper
+        margin-top: 80px
+        .cs-sec1-card
+            display: flex
+            flex-direction: column
+            gap: 16px
+            &-img
+                position: relative
+                width: max-content
+                &-after
+                    position: absolute
+                    top: 0px
+                    right: -20px
+            .cs-title
+                font-size: 20px
+                line-height: 22px
+                font-weight: 500
+                color: variables.$fontColor
+            .cs-desc
+                font-size: 18px
+                line-height: 28px
+                font-weight: 400
+                color: variables.$fontColor
+.cs-section2
+    padding: 80px 0
+    background: variables.$fontColor
+    .cs-sec2-head
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .cs-global-title
+            color: variables.$whiteColor
+        .cs-white-btn
+            padding: 12px 25px
+            border-radius: 8px
+            font-size: 24px
+            line-height: 24px
+            font-weight: 400
+            border-width: 2px
+    .cs-sec2-wrapper
+        background-position: center
+        background-repeat: no-repeat
+        padding-top: 80px
+        .row
+            padding: 25px 0 100px 0
+        .card
+            background-color: variables.$fontColor
+            box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px, rgba(255, 255, 255, 0.3) 0px 8px 16px -8px
+            max-width: 395px
+            width: 100%
+            border-radius: 10px
+            .card-img-top
+                height: 220px
+                object-fit: cover
+            .card-title
+                font-size: 24px
+                line-height: 32px
+                font-weight: variables.$fontWeightBold
+                color: variables.$whiteColor
+            .card-text
+                font-size: 18px
+                line-height: 26px
+                font-weight: variables.$fontWeightRegular
+                color: variables.$whiteColor
+            .cs-white-btn
+                color: variables.$whiteColor
+                font-size: 20px
+                line-height: 28px
+                border: 2px solid variables.$whiteColor
+                padding: 12px
+                border-radius: 8px
+                transition: all 0.3s ease
+                width: 100%
+                margin-top: 20px
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 10px
+.cs-section3
+    padding: 160px 80px
+    background: variables.$color1
+    .cs-sec3-wrapper
+        border-radius: 30px
+        padding: 80px
+        background-color: variables.$whiteColor
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px
+        .cs-textbox
+            display: flex
+            flex-direction: column
+            gap: 24px
+            .cs-title
+                font-size: 56px
+                line-height: 64px
+                color: variables.$fontColor
+            .cs-sec3-list
+                padding: 0
+                list-style: none
+                max-width: 495px
+                width: 100%
+                li
+                    font-size: 20px
+                    line-height: 28px
+                    color: variables.$fontColor
+                    font-weight: 400
+                    margin-bottom: 5px
+                    display: flex
+                    gap: 10px
+                    align-items: center
+        .cs-sec3-screenbox
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            &-img
+                position: relative
+                z-index: 2
+                max-width: 520px
+                width: 100%
+                height: 350px
+                object-fit: cover
+            &-after
+                position: absolute
+                z-index: 1
+                top: -140px
+                left: -40px
+                max-width: 710px
+.cs-section4
+    padding: 80px 0
+    position: relative
+    width: 100%
+    background: variables.$color1
+    .cs-sec4-head
+        padding-bottom: 40px
+    .cs-sec4-background
+        position: absolute
+        z-index: 1
+        background-color: variables.$color3
+        max-width: 1360px
+        width: 100%
+        height: 420px
+        left: 50%
+        transform: translateX(-50%)
+    .owl-carousel
+        margin-top: 40px
+        .item
+            display: flex
+            justify-content: center
+        .owl-nav
+            position: absolute
+            top: -140px
+            right: 5%
+            display: flex
+            gap: 15px
+            button
+                padding: 10px 15px !important
+                border-radius: 50%
+                border: 2px solid variables.$mainColor
+                color: variables.$mainColor
+        .owl-stage-outer
+            height: 100% !important
+        .card
+            background: variables.$whiteColor
+            border-radius: 20px
+            max-width: 384px
+            height: 430px
+            width: 100%
+            padding: 32px
+            display: flex
+            flex-direction: column
+            gap: 16px
+            justify-content: space-between
+            .card-head
+                display: flex
+                gap: 8px
+                align-items: center
+                img
+                    width: 32px
+                    height: 32px
+                .cs-brand
+                    font-size: 24px
+                    line-height: 32px
+                    color: variables.$brandColor
+                    font-weight: 700
+                    margin: 0
+            .card-text
+                .cs-desc
+                    font-size: 24px
+                    line-height: 38px
+                    font-weight: 400
+                    color: variables.$blackColor
+                    display: -webkit-box
+                    -webkit-line-clamp: 5
+                    -webkit-box-orient: vertical
+                    overflow: hidden
+                    text-overflow: ellipsis
+            .card-foot
+                display: flex
+                gap: 16px
+                align-items: center
+                img
+                    width: 64px
+                    height: 64px
+                    object-fit: cover
+                .cs-textbox
+                    display: flex
+                    flex-direction: column
+                    .cs-desc1
+                        font-size: 18px
+                        line-height: 26px
+                        color: variables.$blackColor
+                        font-weight: 400
+                        margin: 0
+                    .cs-desc2
+                        font-size: 16px
+                        line-height: 24px
+                        color: variables.$brandColor
+                        font-weight: 400
+                        margin: 0
+.cs-section5
+    padding: 
+        top: 80px 
+    position: relative
+    width: 100%
+    background: variables.$color1
+    .cs-sec5-wrapper
+        .cs-sec5-head
+            margin-bottom: 80px
+            .cs-desc
+                margin-top: 40px
+                font-size: 18px
+                line-height: 26px
+                color: variables.$fontColor
+                font-weight: 400
+        .cs-sec5-main
+            background-repeat: no-repeat
+            background-size: cover
+            padding: 80px 0 160px
+            .cs-sec5-list
+                list-style: none
+                padding: 0
+                display: flex
+                flex-direction: column
+                gap: 16px
+                margin-top: 50px
+                .cs-item 
+                    a
+                        font-size: 20px
+                        line-height: 28px
+                        font-weight: 500
+                        color: variables.$fontColor
+                        text-decoration: none
+                        display: flex
+                        gap: 10px
+                        align-items: center
+                        width: max-content
+                        padding: 8px
+                        &.active
+                            padding: 12px 12px
+                            border-radius: 8px
+                            background: variables.$whiteColor
+                            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+                            .cs-right-icon
+                                display: flex
+                        .cs-right-icon
+                            display: none
+            .cs-sec5-imgbox
+                position: relative
+                .cs-sec5-row
+                    justify-content: space-between
+                    align-items: flex-end
+                .cs-img-1
+                    position: absolute
+                    top: 0
+                    right: 150px
+                    max-width: 760px
+                    width: 100%
+                .cs-img-2
+                    position: absolute
+                    top: 100px
+                    right: 50px
+                    max-width: 760px
+                    width: 100%
+                .cs-img-3
+                    position: absolute
+                    top: 180px
+                    right: 0
+                    max-width: 255px
+                    width: 100%
+.cs-section6
+    padding: 80px 0
+    background-color: variables.$mainColor
+    margin-top: -1px
+    .cs-sec6-main
+        position: relative
+        height: 650px
+        .cs-map
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%,-50%)
+            z-index: 0
+            max-width: 1059px
+            width: 100%
+            object-fit: contain
+
+        .cs-ellipses
+            position: absolute
+            left: 53.5%
+            top: 46%
+            transform: translate(-50%,-50%)
+            z-index: 0
+            max-width: 724px
+            width: 100%
+            height: 455px
+            object-fit: contain
+        .cs-sec6-text
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%,-50%)
+            z-index: 1
+            .cs-title-1
+                font-size: 96px
+                line-height: 104px
+                color: variables.$whiteColor
+                font-weight: 700
+                text-align: center
+            .cs-title-2
+                font-size: 56px
+                line-height: 64px
+                color: variables.$whiteColor
+                font-weight: 700
+                text-align: center
+        .cs-textbox-4
+            max-width: 255px
+            width: 100%
+            z-index: 1 !important
+            position: relative
+            display: flex
+            align-items: center
+            flex-direction: column
+            &::after
+                content: ' '
+                display: block
+                background-color: variables.$color4
+                width: 32px
+                height: 32px
+                border-radius: 50%
+                position: absolute
+                bottom: 0px
+                left: 50%
+                transform: translateX(-50%)
+            img
+                width: 100%
+            .cs-desc
+                font-size: 14px
+                line-height: 22px
+                border-radius: 4px
+                color: #0F172A
+                font-weight: 400
+                padding: 10px
+                background: #E2E8F0
+                margin-top: -38px
+                max-width: 210px
+                width: 100%
+                position: relative
+                z-index: 2
+.cs-footer-main
+    background: variables.$fontColor
+    padding-top: 50px
+    .cs-footer-area
+        .cs-title
+            font-size: 16px
+            line-height: 24px
+            color: variables.$whiteColor
+            font-weight: 500
+            margin-bottom: 15px
+        .cs-footer-menu
+            list-style: none
+            padding: 0
+            display: flex
+            flex-direction: column
+            gap: 10px
+            li
+                a
+                    font-size: 16px
+                    line-height: 24px
+                    color: variables.$whiteColor
+                    font-weight: 400
+                    text-decoration: none
+                img
+                    max-width: 135px
+                    height: 45px
+                    object-fit: contain
+    .cs-footer-list-2
+        display: flex
+        list-style: none
+        padding: 0
+        align-items: center
+        gap: 20px
+        li
+            a
+                color: variables.$whiteColor
+                font-size: 16px
+                line-height: 24px
+                font-weight: 400
+                text-decoration: none
+    .cs-privacy-area
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 24px 0
+        border-top: 0.5px solid variables.$whiteColor
+        margin-top: 20px
+        .cs-desc
+            color: variables.$whiteColor
+            font-size: 16px
+            line-height: 24px
+            font-weight: 400
+
+/* RESPONSİVE START */
+@media (min-width:1280px) and (max-width:1366px)  
+    .cs-section3
+        .cs-sec3-wrapper
+            .cs-sec3-screenbox
+                &-after
+                    position: absolute
+                    z-index: 0
+                    top: -50px
+                    left: -50px
+                    max-width: 600px
+
+@media (min-width:1024px) and (max-width:1279px) 
+    .cs-container
+        padding: 0 15px
+    .cs-global-title
+        font-size: 32px
+        line-height: 35px
+        font-weight: 700
+        color: variables.$fontColor
+    .cs-border-btn,.cs-no-border-btn
+        padding: 12px 19px
+    .navbar-nav
+        align-items: center
+    .cs-section1 
+        background: variables.$color1
+        .cs-sec1-text-wrapper 
+            .cs-sec1-textbox
+                text-align: center
+                margin-bottom: 40px
+                .cs-title
+                    font-size: 56px
+                    line-height: 62px
+        .cs-yellow-box
+            max-width: 270px !important
+            height: 275px !important
+            img
+                max-width: 360px
+                height: 285px
+        .cs-sec-1-card-wrapper 
+            .cs-sec1-card
+                align-items: center
+                text-align: center
+    .cs-section2 
+        .cs-sec2-head
+            flex-direction: column
+            text-align: center
+            gap: 16px
+    .cs-section3
+        padding: 50px 15px 15px
+        .cs-sec3-wrapper
+            padding: 0
+            position: relative
+            z-index: 2
+            .cs-textbox
+                align-items: center
+                padding: 15px 0
+                button
+                    position: relative
+                    z-index: 2
+            .cs-sec3-screenbox
+                &-img
+                    position: relative
+                    z-index: 2
+                    max-width: 520px
+                    width: 100%
+                    height: auto
+                    object-fit: cover
+                &-after
+                    position: absolute
+                    z-index: 0
+                    top: -30px
+                    left: 25px
+                    width: 100%
+    .cs-section4
+        .cs-sec4-background
+            height: 350px !important
+        .card
+            height: 360px !important
+            .card-text
+                .cs-desc
+                    font-size: 16px !important
+                    line-height: 22px !important
+                    font-weight: 400 !important
+        
+    .cs-section5
+        padding-top: 0
+        .cs-sec5-head
+            text-align: center
+        .cs-sec5-main
+            padding: 0 !important
+            height: 550px
+            .cs-sec5-list
+                gap: 8px !important
+            .cs-sec5-imgbox 
+                margin-top: 50px
+                .cs-img-1
+                    max-width: 295px !important
+                    right: auto !important
+                    left: 25% !important
+                .cs-img-2
+                    max-width: 295px !important
+                    right: auto !important
+                    left: 35% !important
+                .cs-img-3
+                    max-width: 95px !important
+                    top: 210px !important
+                    left: 65% !important
+    .cs-section6 
+        .cs-sec6-main 
+            height:580px
+            .cs-sec6-text 
+                .cs-title-1
+                    font-size: 48px
+                    line-height: 56px
+                .cs-title-2
+                    font-size: 32px
+                    line-height: 40px
+            .cs-ellipses,.cs-map,.cs-sec6-text
+                left: 50%
+                top: 65%
+            .cs-ellipses
+                max-width: 60%
+    .cs-footer-main 
+        .cs-privacy-area
+            flex-direction: column
+            align-items: center
+        .cs-footer-area 
+            gap: 30px
+            .cs-title
+                text-align: center
+                margin-bottom: 15px
+            .cs-footer-menu
+                align-items: center
+            .cs-footer-list-2
+                justify-content: center
+
+@media (min-width:768px) and (max-width:1023px)
+    .cs-container
+        padding: 0 15px
+    .cs-global-title
+        font-size: 32px
+        line-height: 35px
+        font-weight: 700
+        color: variables.$fontColor
+    .cs-border-btn,.cs-no-border-btn
+        padding: 12px 19px
+    .navbar-nav
+        align-items: center
+    .cs-section1 
+        background: variables.$color1
+        .cs-sec1-text-wrapper 
+            .cs-sec1-textbox
+                text-align: center
+                margin-bottom: 40px
+                .cs-title
+                    font-size: 56px
+                    line-height: 62px
+        .cs-yellow-box
+            max-width: 270px !important
+            height: 275px !important
+            img
+                max-width: 330px
+                height: 285px
+        .cs-sec-1-card-wrapper 
+            .cs-sec1-card
+                align-items: center
+                text-align: center
+    .cs-section2 
+        .cs-sec2-head
+            flex-direction: column
+            text-align: center
+            gap: 16px
+        .cs-sec2-wrapper
+            .card
+                .card-img-top
+                    height: 175px
+    .cs-section3
+        padding: 50px 15px 15px
+        .cs-sec3-wrapper
+            padding: 0
+            position: relative
+            z-index: 2
+            .cs-textbox
+                align-items: center
+                padding: 15px 0
+                button
+                    position: relative
+                    z-index: 2
+            .cs-sec3-screenbox
+                &-img
+                    position: relative
+                    z-index: 2
+                    max-width: 520px
+                    width: 100%
+                    height: auto
+                    object-fit: cover
+                &-after
+                    position: absolute
+                    z-index: 0
+                    top: -30px
+                    left: 25px
+                    width: 100%
+    .cs-section4
+        .cs-sec4-background
+            height: 350px !important
+        .card
+            height: 360px !important
+            .card-text
+                .cs-desc
+                    font-size: 16px !important
+                    line-height: 22px !important
+                    font-weight: 400 !important
+        
+    .cs-section5
+        padding-top: 0
+        .cs-sec5-head
+            text-align: center
+        .cs-sec5-main
+            padding: 0 !important
+            height: 550px
+            .cs-sec5-list
+                gap: 8px !important
+            .cs-sec5-imgbox 
+                margin-top: 50px
+                .cs-img-1
+                    max-width: 295px !important
+                    right: auto !important
+                    left: 25% !important
+                .cs-img-2
+                    max-width: 295px !important
+                    right: auto !important
+                    left: 35% !important
+                .cs-img-3
+                    max-width: 95px !important
+                    top: 210px !important
+                    left: 65% !important
+    .cs-section6 
+        .cs-sec6-main 
+            height:580px
+            .cs-sec6-text 
+                .cs-title-1
+                    font-size: 48px
+                    line-height: 56px
+                .cs-title-2
+                    font-size: 32px
+                    line-height: 40px
+            .cs-ellipses,.cs-map,.cs-sec6-text
+                left: 50%
+                top: 65%
+            .cs-ellipses
+                max-width: 60%
+    .cs-footer-main 
+        .cs-privacy-area
+            flex-direction: column
+            align-items: center
+        .cs-footer-area 
+            gap: 30px
+            .cs-title
+                text-align: center
+                margin-bottom: 15px
+            .cs-footer-menu
+                align-items: center
+            .cs-footer-list-2
+                justify-content: center
+
+@media (max-width:767px)
+    .cs-container
+        padding: 0 15px
+    .cs-global-title
+        font-size: 32px
+        line-height: 35px
+        font-weight: 700
+        color: variables.$fontColor
+    .cs-border-btn,.cs-no-border-btn
+        padding: 12px 19px
+    .navbar-nav
+        align-items: center
+    .cs-section1 
+        background: variables.$color1
+        .cs-sec1-text-wrapper 
+            .cs-sec1-textbox
+                text-align: center
+                margin-bottom: 40px
+                .cs-title
+                    font-size: 56px
+                    line-height: 62px
+        .cs-yellow-box
+            max-width: 270px !important
+            height: 275px !important
+            img
+                max-width: 360px
+                height: 285px
+        .cs-sec-1-card-wrapper 
+            .cs-sec1-card
+                align-items: center
+                text-align: center
+    .cs-section2 
+        .cs-sec2-head
+            flex-direction: column
+            text-align: center
+            gap: 16px
+        .cs-sec2-wrapper
+            .row
+                gap: 16px
+                .col-12
+                    display: flex
+                    justify-content: center
+    .cs-section3
+        padding: 15px
+        .cs-sec3-wrapper
+            padding: 0
+            position: relative
+            z-index: 2
+            .cs-textbox
+                align-items: center
+                padding: 15px 0
+                button
+                    position: relative
+                    z-index: 2
+            .cs-sec3-screenbox
+                &-img
+                    position: relative
+                    z-index: 2
+                    max-width: 520px
+                    width: 100%
+                    height: auto
+                    object-fit: cover
+                &-after
+                    position: absolute
+                    z-index: 0
+                    top: -30px
+                    left: 25px
+                    width: 100%
+    .cs-section4
+        .cs-sec4-background
+            height: 350px !important
+        .card
+            height: 360px !important
+            .card-text
+                .cs-desc
+                    font-size: 16px !important
+                    line-height: 22px !important
+                    font-weight: 400 !important
+        .owl-nav
+            display: none !important
+    .cs-section5
+        padding-top: 0
+        .cs-sec5-head
+            text-align: center
+        .cs-sec5-main
+            padding: 0 !important
+            height: 450px
+            .cs-sec5-list
+                flex-direction: row !important
+                overflow: hidden
+                overflow-x: auto
+                align-items: center
+                margin: 0 !important
+                padding-bottom: 5px !important
+                &::-webkit-scrollbar
+                    height: 0 !important
+            .cs-sec5-imgbox 
+                margin-top: 50px
+                .cs-img-1
+                    max-width: 295px !important
+                    right: auto !important
+                    left: 0 !important
+                .cs-img-2
+                    max-width: 295px !important
+                    right: auto !important
+                    left: 25px !important
+                .cs-img-3
+                    max-width: 95px !important
+    .cs-section6 
+        .cs-sec6-main 
+            height:580px
+            .cs-textbox-4
+                margin: 0 auto
+                &::after
+                    display: none
+            .cs-sec6-text 
+                .cs-title-1
+                    font-size: 48px
+                    line-height: 56px
+                .cs-title-2
+                    font-size: 32px
+                    line-height: 40px
+            .cs-ellipses,.cs-map,.cs-sec6-text
+                left: 50%
+                top: 65%
+            .cs-ellipses
+                max-width: 60%
+    .cs-footer-main 
+        .cs-privacy-area
+            flex-direction: column
+            align-items: center
+        .cs-footer-area 
+            gap: 30px
+            .cs-title
+                text-align: center
+                margin-bottom: 15px
+            .cs-footer-menu
+                align-items: center
+            .cs-footer-list-2
+                justify-content: center
